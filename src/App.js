@@ -1,10 +1,12 @@
 import GlobalStyles from './styles/global';
 
+import Header from './components/Header';
+
 function App() {
   return (
     <>
       <GlobalStyles />
-      <h1>Hello Space!!!</h1>
+      <Header />
     </>
   );
 }
