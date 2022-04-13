@@ -1,25 +1,26 @@
+import { Link } from 'react-router-dom';
 import { Navbar } from './styles';
 
 export default function Nav() {
   return (
     <Navbar>
 
-      <a href="/">
+      <Link to="/">
         <span>00</span>
         Home
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/destination">
         <span>00</span>
         Destination
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/crew">
         <span>00</span>
         Crew
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/technology">
         <span>00</span>
         Technology
-      </a>
+      </Link>
 
     </Navbar>
   );
