@@ -12,8 +12,6 @@ export const fonts = {
 };
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
-
   * {
     margin: 0;
     padding: 0;
