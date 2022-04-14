@@ -5,7 +5,7 @@ export default function Nav() {
   return (
     <Navbar>
 
-      <Link to="/">
+      <Link to="/" className="active">
         <span>00</span>
         Home
       </Link>
