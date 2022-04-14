@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import {
   Bodytext, Heading3, Heading4, Heading5,
 } from '../../styles/global';
@@ -6,9 +8,23 @@ import { Section, Info, Nav } from './styles';
 
 const { crew } = require('../../assets/data.json');
 
-const currentCrewMember = crew[0];
+// const currentCrewMember = crew[0];
 
 export default function Crew() {
+  const [crewMembers, setCrewMembers] = useState(crew);
+  const [currentCrewMember, setCurrentCrewMember] = useState(crew[0]);
+
+  function handleChangeCrewMember(e) {
+    const name = e.target.id;
+
+    setCurrentCrewMember(crewMembers.find((crewMember) => crewMember.name === name));
+    setCrewMembers((prevState) => prevState.map(
+      (member) => (member.name === name
+        ? { ...member, active: true }
+        : { ...member, active: false }),
+    ));
+  }
+
   return (
     <Section>
       <div>
@@ -24,10 +40,15 @@ export default function Crew() {
         </Info>
 
         <Nav>
-          <button type="button" className="active" />
-          <button type="button" />
-          <button type="button" />
-          <button type="button" />
+          {crewMembers.map((crewMember) => (
+            <button
+              id={crewMember.name}
+              type="button"
+              className={crewMember.active ? 'active' : ''}
+              onClick={handleChangeCrewMember}
+            />
+          ))}
+
         </Nav>
 
       </div>
