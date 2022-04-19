@@ -26,7 +26,8 @@ export default function Crew() {
 
   return (
     <Section>
-      <div>
+
+      <div className="description">
         <Heading5>
           <strong>02 </strong>
           Meet your crew
@@ -52,10 +53,12 @@ export default function Crew() {
 
       </div>
 
-      <img
-        src={images.png}
-        alt={name}
-      />
+      <div className="img-container">
+        <img
+          src={images.png}
+          alt={name}
+        />
+      </div>
     </Section>
   );
 }

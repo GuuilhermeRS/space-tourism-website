@@ -1,8 +1,10 @@
 import styled from 'styled-components';
 
+import { colors } from '../../styles/global';
+
 export const Section = styled.section`
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-evenly;
   margin-top: 44px;
 
@@ -13,15 +15,30 @@ export const Section = styled.section`
       opacity: .25;
     }
   }
+
+  .description{
+    width: 624px;
+  }
+
+  .img-container {
+    width: 616px;
+    height: 712px;
+  }
 `;
 
 export const Info = styled.div`
   h4 {
     opacity: .5;
+    margin-bottom: 16px;
   }
 
   h3 {
     margin-bottom: 30px;
+  }
+
+  p {
+    height: 160px;
+    color: ${colors.primary};
   }
 `;
 
