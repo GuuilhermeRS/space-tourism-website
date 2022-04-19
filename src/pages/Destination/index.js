@@ -10,18 +10,18 @@ import {
 const { destinations } = require('../../assets/data.json');
 
 export default function Destination() {
-  const [planets, setPlanets] = useState(destinations);
+  const [planets] = useState(destinations);
   const [currentPlanet, setCurrentPlanet] = useState(planets[0]);
 
   function handleChangePlanet(e) {
     const name = e.target.id;
 
     setCurrentPlanet(planets.find((planet) => planet.name === name));
-    setPlanets((prevState) => prevState.map((planet) => (planet.name === name
-      ? { ...planet, active: true }
-      : { ...planet, active: false }
-    )));
   }
+
+  const {
+    images, name, description, distance, travel,
+  } = currentPlanet;
 
   return (
     <Section>
@@ -31,14 +31,14 @@ export default function Destination() {
       </Heading5>
 
       <Planet>
-        <img src={currentPlanet.images.png} alt={currentPlanet.name} />
+        <img src={images.png} alt={name} />
 
         <div>
           <PlanetList>
             {planets.map((planet) => (
               <li
                 key={planet.name}
-                className={planet.active ? 'active' : ''}
+                className={planet.name === name ? 'active' : ''}
               >
                 <button
                   type="button"
@@ -51,17 +51,17 @@ export default function Destination() {
             ))}
           </PlanetList>
 
-          <Heading2>{currentPlanet.name}</Heading2>
-          <Bodytext>{currentPlanet.description}</Bodytext>
+          <Heading2>{name}</Heading2>
+          <Bodytext>{description}</Bodytext>
 
           <PlanetInfo>
             <div>
               <Subheading2>AVG. Distance</Subheading2>
-              <Subheading1>{currentPlanet.distance}</Subheading1>
+              <Subheading1>{distance}</Subheading1>
             </div>
             <div>
               <Subheading2>Est. Travel Time</Subheading2>
-              <Subheading1>{currentPlanet.travel}</Subheading1>
+              <Subheading1>{travel}</Subheading1>
             </div>
           </PlanetInfo>
         </div>

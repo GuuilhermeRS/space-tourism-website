@@ -2,7 +2,6 @@
   "destinations": [
     {
       "name": "Moon",
-      "active": true,
       "images": {
         "png": "./assets/destination/image-moon.png",
         "webp": "./assets/destination/image-moon.webp"
@@ -13,7 +12,6 @@
     },
     {
       "name": "Mars",
-      "active": false,
       "images": {
         "png": "./assets/destination/image-mars.png",
         "webp": "./assets/destination/image-mars.webp"
@@ -24,7 +22,6 @@
     },
     {
       "name": "Europa",
-      "active": false,
       "images": {
         "png": "./assets/destination/image-europa.png",
         "webp": "./assets/destination/image-europa.webp"
@@ -35,7 +32,6 @@
     },
     {
       "name": "Titan",
-      "active": false,
       "images": {
         "png": "./assets/destination/image-titan.png",
         "webp": "./assets/destination/image-titan.webp"

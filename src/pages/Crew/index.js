@@ -11,19 +11,18 @@ const { crew } = require('../../assets/data.json');
 // const currentCrewMember = crew[0];
 
 export default function Crew() {
-  const [crewMembers, setCrewMembers] = useState(crew);
+  const [crewMembers] = useState(crew);
   const [currentCrewMember, setCurrentCrewMember] = useState(crew[0]);
 
   function handleChangeCrewMember(e) {
     const name = e.target.id;
 
     setCurrentCrewMember(crewMembers.find((crewMember) => crewMember.name === name));
-    setCrewMembers((prevState) => prevState.map(
-      (member) => (member.name === name
-        ? { ...member, active: true }
-        : { ...member, active: false }),
-    ));
   }
+
+  const {
+    role, name, bio, images,
+  } = currentCrewMember;
 
   return (
     <Section>
@@ -34,9 +33,9 @@ export default function Crew() {
         </Heading5>
 
         <Info>
-          <Heading4>{currentCrewMember.role}</Heading4>
-          <Heading3>{currentCrewMember.name}</Heading3>
-          <Bodytext>{currentCrewMember.bio}</Bodytext>
+          <Heading4>{role}</Heading4>
+          <Heading3>{name}</Heading3>
+          <Bodytext>{bio}</Bodytext>
         </Info>
 
         <Nav>
@@ -44,7 +43,7 @@ export default function Crew() {
             <button
               id={crewMember.name}
               type="button"
-              className={crewMember.active ? 'active' : ''}
+              className={crewMember.name === name ? 'active' : ''}
               onClick={handleChangeCrewMember}
             />
           ))}
@@ -54,8 +53,8 @@ export default function Crew() {
       </div>
 
       <img
-        src={currentCrewMember.images.png}
-        alt={currentCrewMember.name}
+        src={images.png}
+        alt={name}
       />
     </Section>
   );

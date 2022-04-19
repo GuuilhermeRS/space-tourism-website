@@ -15,7 +15,7 @@ export const Container = styled.header`
 
   div::before {
     content: '';
-    width: 800px;
+    width: calc(100vw - 830px);
     height: 1px;
     background: #fff;
 
