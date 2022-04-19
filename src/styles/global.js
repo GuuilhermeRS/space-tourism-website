@@ -18,7 +18,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background: ${colors.primary} url(./assets/background/destination.jpg) no-repeat fixed;
+    background: ${colors.primary} no-repeat fixed;
+    background-image: url(${(props) => props.background});
     background-size: cover;
 
     font-family: ${fonts.sansSerif};

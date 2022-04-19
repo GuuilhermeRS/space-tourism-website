@@ -1,14 +1,19 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar } from './styles';
+
+import { BackgroundContext } from '../../App';
 
 const pages = ['destination', 'crew', 'technology'];
 
 export default function Nav() {
   const [currentPage, setCurrentPage] = useState('home');
+  const { handleBackground } = useContext(BackgroundContext);
 
   const handleCurrentPage = (event) => {
-    setCurrentPage(event.target.id);
+    const { id } = event.target;
+    setCurrentPage(id);
+    handleBackground(id);
   };
 
   return (
