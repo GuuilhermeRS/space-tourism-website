@@ -42,6 +42,7 @@ export default function Crew() {
         <Nav>
           {crewMembers.map((crewMember) => (
             <button
+              key={crewMember.name}
               id={crewMember.name}
               type="button"
               className={crewMember.name === name ? 'active' : ''}

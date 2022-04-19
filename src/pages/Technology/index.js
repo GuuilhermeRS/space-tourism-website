@@ -33,6 +33,7 @@ export default function Technology() {
         <Nav>
           {tech.map((item, index) => (
             <button
+              key={item.name}
               id={index}
               type="button"
               className={index === currentIndex ? 'active' : ''}

@@ -32,6 +32,7 @@ export default function Nav() {
       {pages.map((page, index) => (
         <Link
           to={`/${page}`}
+          key={page}
           id={page}
           className={currentPage === page ? 'active' : ''}
           onClick={handleCurrentPage}
