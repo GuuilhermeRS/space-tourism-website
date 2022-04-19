@@ -21,6 +21,6 @@ export const Container = styled.header`
 
     display: block;
     position: relative;
-    right: -95px;
+    right: -48px;
   }
 `;
