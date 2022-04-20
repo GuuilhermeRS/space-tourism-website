@@ -7,9 +7,11 @@ const ContentStyles = styled.div`
   justify-content: center;
   margin-top: 76px;
 
-  @media (max-width: 768px) and (min-width: 376px) {
+  @media (max-width: 768px) {
     margin: 0;
   }
+
+
 `;
 
 export default ContentStyles;

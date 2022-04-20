@@ -58,6 +58,25 @@ export const Section = styled.section`
       }
     }
   }
+
+  @media (max-width: 375px){
+    max-width: 100%;
+    max-height: 648;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      width: 150px;
+      height: 150px;
+      margin: 0;
+
+      &:hover {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  }
 `;
 
 export const Title = styled.div`
@@ -65,13 +84,24 @@ export const Title = styled.div`
     margin: 24px 0;
   }
 
+  h5 {
+    color: ${colors.primary};
+  }
 
-  @media (max-width: 768px) and (min-width: 376px) {
+  @media (max-width: 768px) {
     h1, h5, p {
-      text-align: center
+      text-align: center;
     }
 
     align-items: center;
     justify-content: center;
+  }
+
+  @media (max-width: 375px) {
+    max-width: 328px;
+
+    h1 {
+      margiN: 8px 0;
+    }
   }
 `;
