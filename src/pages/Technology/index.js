@@ -45,15 +45,17 @@ export default function Technology() {
 
         </Nav>
 
-        <div className="tech">
-          <div className="info">
-            <Subheading2>The terminology ...</Subheading2>
-            <Heading3>{name}</Heading3>
-            <Bodytext>{description}</Bodytext>
-          </div>
-
-          <img src={images.portrait} alt={name} />
+        <div className="info">
+          <Subheading2>The terminology ...</Subheading2>
+          <Heading3>{name}</Heading3>
+          <Bodytext>{description}</Bodytext>
         </div>
+
+        <picture>
+          <source media="(max-width: 768px)" srcSet={images.landscape} alt={name} />
+          <source media="(min-width: 769px)" src={images.portrait} alt={name} />
+          <img src={images.portrait} alt={name} />
+        </picture>
       </Container>
     </Section>
   );

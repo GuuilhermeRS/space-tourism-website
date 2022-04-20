@@ -12,6 +12,16 @@ export const Section = styled.section`
   strong {
     opacity: .25;
   }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    width: 100%;
+    height: 100%;
+
+    h5 {
+      margin-left: 40px;
+      margin-top: 40px;
+    }
+  }
 `;
 
 export const Container = styled.div`
@@ -25,23 +35,36 @@ export const Container = styled.div`
     font-size: 16px;
   }
 
-  .tech {
+  .info {
     display: flex;
-    justify-content: space-between;
-    width: 1400px;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    flex-direction: column;
 
     .info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      order: 3;
+      text-align: center;
     }
+
+    picture {
+      order: 1;
+      margin-top: 60px;
+
+      source, img {
+        max-width: 100%;
+        max-height: 310px;
+      }
+    }
+
   }
 `;
 
 export const Nav = styled.nav`
   display: flex;
   flex-direction: column;
-  margin-right: 80px;
 
   button {
     width: 80px;
@@ -63,10 +86,19 @@ export const Nav = styled.nav`
     }
   }
 
-
   .active {
     background: ${colors.light};
     border: ${colors.light};
     color: ${colors.dark};
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    flex-direction: row;
+    margin: 56px 0 40px;
+    order: 2;
+
+    button {
+      margin: 0 8px;
+    }
   }
 `;
