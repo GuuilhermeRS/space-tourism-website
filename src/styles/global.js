@@ -48,6 +48,11 @@ export const Heading2 = styled.h2`
   font-size: 100px;
 
   text-transform: uppercase;
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    font-size: 80px;
+    text-align: center;
+  }
 `;
 
 export const Heading3 = styled.h3`
@@ -69,10 +74,12 @@ export const Heading4 = styled.h4`
 export const Heading5 = styled.h5`
   font-weight: 400;
   font-size: 28px;
-
   letter-spacing: 4.75px;
-
   text-transform: uppercase;
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    font-size: 20px;
+  }
 `;
 
 export const Subheading1 = styled.h6`
@@ -92,8 +99,12 @@ export const Subheading2 = styled.h6`
 export const Bodytext = styled.p`
   font-weight: 400;
   font-size: 18px;
-
   line-height: 32px;
-
   max-width: 450px;
+  color: ${colors.primary};
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    max-width: 552px;
+    text-align: center;
+  }
 `;

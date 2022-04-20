@@ -14,6 +14,18 @@ export const Section = styled.section`
   strong {
     opacity: .25;
   }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    width: 100%;
+    height: calc(100vh - 96px);
+    padding: 0 40px;
+    align-items: center;
+
+    h5 {
+      margin-top: 40px;
+      align-self: flex-start;
+    }
+  }
 `;
 
 export const Planet = styled.div`
@@ -34,17 +46,32 @@ export const Planet = styled.div`
     position: relative;
     bottom: -54px;
   }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    flex-direction: column;
+    max-width: 576px;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 48px;
+
+    img {
+      width: 300px;
+      height: 300px;
+    }
+
+    p::after {
+      bottom: -32px;
+    }
+  }
 `;
 
 export const PlanetList = styled.ul`
   display: flex;
-
   list-style: none;
-
   margin-bottom: 50px;
 
   button {
-    color: ${colors.light};
+    color: ${colors.primary};
     font-size: 16px;
     background:transparent;
     border: none;
@@ -58,7 +85,7 @@ export const PlanetList = styled.ul`
     &:hover::after {
       content: '';
       width: 100%;
-      height: 3px;
+      height: 2px;
       background: ${colors.light};
       opacity: .5;
 
@@ -68,19 +95,28 @@ export const PlanetList = styled.ul`
     }
   }
 
-  .active:hover::after {
-    height: 0;
+  .active {
+    button {
+      color: ${colors.light};
+    }
   }
 
   .active::after {
     content: '';
     width: calc(100% - 30px);
-    height: 3px;
+    height: 2px;
     background: ${colors.light};
 
     display: block;
     position: relative;
     bottom: -12px;
+
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
   }
 `;
 
@@ -90,5 +126,13 @@ export const PlanetInfo = styled.div`
   div {
     margin-right: 80px;
     margin-top: 80px;
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    justify-content: space-around;
+
+    div {
+      margin: 48px 0 0 0;
+    }
   }
 `;
