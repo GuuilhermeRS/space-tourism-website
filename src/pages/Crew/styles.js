@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 
-import { colors } from '../../styles/global';
-
 export const Section = styled.section`
   width: 1400px;
   height: calc(100vh - 212px);
@@ -28,6 +26,26 @@ export const Section = styled.section`
     justify-content: flex-end;
     align-items: flex-end;
   }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    width: 100%;
+    height: calc(100vh - 96px);
+    padding: 0 40px;
+    flex-direction: column;
+    align-items: center;
+
+    h5 {
+      margin: 40px 0 0;
+    }
+
+    .img-container {
+      display: flex;
+      justify-content: center;
+      img {
+        max-height: 400px;
+      }
+    }
+  }
 `;
 
 export const Info = styled.div`
@@ -42,7 +60,28 @@ export const Info = styled.div`
 
   p {
     height: 160px;
-    color: ${colors.primary};
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h4 {
+      margin-top: 60px;
+      margin-bottom: 8px;
+    }
+
+    h3 {
+      margin-bottom: 16px;
+    }
+
+    p {
+      max-width: 468px;
+      height: 100%;
+      font-size: 16px;
+    }
   }
 `;
 
@@ -64,5 +103,15 @@ export const Nav = styled.div`
 
   .active {
     opacity: 1;
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    button {
+      margin: 0 12px;
+    }
   }
 `;

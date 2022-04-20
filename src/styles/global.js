@@ -61,6 +61,10 @@ export const Heading3 = styled.h3`
   font-size: 56px;
 
   text-transform: uppercase;
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    font-size: 40px;
+  }
 `;
 
 export const Heading4 = styled.h4`
@@ -69,6 +73,10 @@ export const Heading4 = styled.h4`
   font-size: 32px;
 
   text-transform: uppercase;
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    font-size: 24px;
+  }
 `;
 
 export const Heading5 = styled.h5`
