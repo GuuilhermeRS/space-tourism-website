@@ -32,7 +32,7 @@ export const Navbar = styled.nav`
   .active::after{
     content: '';
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: ${colors.light};
 
     display: block;
@@ -43,12 +43,26 @@ export const Navbar = styled.nav`
   a:hover::after {
     content: '';
     width: 100%;
-    height: 4px;
+    height: 3px;
     background: ${colors.light};
     opacity: .5;
 
     display: block;
     position: relative;
     bottom: -35px;
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    width: 450px;
+    justify-content: space-evenly;
+
+    a {
+      font-size: 14px;
+      margin: 0;
+
+      span {
+        display: none;
+      }
+    }
   }
 `;

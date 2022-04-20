@@ -39,10 +39,39 @@ export const Section = styled.section`
     background: rgba(255, 255, 255, .30);
     color: ${colors.light};
   }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    max-width: 480px;
+    height: calc(100vh - 96px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+
+    a {
+      width: 242px;
+      height: 242px;
+      margin: 0;
+
+      &:hover {
+        width: 242px;
+        height: 242px;
+      }
+    }
+  }
 `;
 
 export const Title = styled.div`
   h1 {
     margin: 24px 0;
+  }
+
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    h1, h5, p {
+      text-align: center
+    }
+
+    align-items: center;
+    justify-content: center;
   }
 `;

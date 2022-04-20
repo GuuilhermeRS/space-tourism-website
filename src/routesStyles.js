@@ -6,6 +6,10 @@ const ContentStyles = styled.div`
   align-items: flex-start;
   justify-content: center;
   margin-top: 76px;
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    margin: 0;
+  }
 `;
 
 export default ContentStyles;

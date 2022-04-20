@@ -19,12 +19,18 @@ export default createGlobalStyle`
 
   body {
     background: ${colors.primary} no-repeat fixed;
-    background-image: url(${(props) => props.background});
+    background-image: url(${(props) => props.background.desktop});
     background-size: cover;
 
     font-family: ${fonts.sansSerif};
     font-weight: 400;
     color: ${colors.light};
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    body {
+      background-image: url(${(props) => props.background.tablet});
+    }
   }
 `;
 

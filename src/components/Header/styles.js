@@ -23,4 +23,12 @@ export const Container = styled.header`
     position: relative;
     right: -48px;
   }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    margin: 0;
+
+    div, div::before {
+      display: none;
+    }
+  }
 `;

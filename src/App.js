@@ -7,10 +7,26 @@ import Header from './components/Header';
 import Routes from './Routes';
 
 const bg = {
-  home: './assets/background/home.jpg',
-  destination: './assets/background/destination.jpg',
-  crew: './assets/background/crew.jpg',
-  technology: './assets/background/technology.jpg',
+  home: {
+    desktop: './assets/background/home-desktop.jpg',
+    tablet: './assets/background/home-tablet.jpg',
+    mobile: './assets/background/home-mobile.jpg',
+  },
+  destination: {
+    desktop: './assets/background/destination-desktop.jpg',
+    tablet: './assets/background/destination-tablet.jpg',
+    mobile: './assets/background/destination-mobile.jpg',
+  },
+  crew: {
+    desktop: './assets/background/crew-desktop.jpg',
+    tablet: './assets/background/crew-tablet.jpg',
+    mobile: './assets/background/crew-mobile.jpg',
+  },
+  technology: {
+    desktop: './assets/background/technology-desktop.jpg',
+    tablet: './assets/background/technology-tablet.jpg',
+    mobile: './assets/background/technology-mobile.jpg',
+  },
 };
 
 export const BackgroundContext = createContext(bg.home);
