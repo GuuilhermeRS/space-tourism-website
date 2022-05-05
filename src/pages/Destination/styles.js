@@ -26,6 +26,12 @@ export const Section = styled.section`
       align-self: flex-start;
     }
   }
+
+  @media (max-width: 375px) {
+    width: 100%;
+    height: 100%;
+    padding: 24px;
+  }
 `;
 
 export const Planet = styled.div`
@@ -57,6 +63,21 @@ export const Planet = styled.div`
     img {
       width: 300px;
       height: 300px;
+    }
+
+    p::after {
+      bottom: -32px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 170px;
+      height: 170px;
     }
 
     p::after {
@@ -118,6 +139,25 @@ export const PlanetList = styled.ul`
     justify-content: center;
     margin-top: 48px;
   }
+
+  @media (max-width: 375px) {
+    margin: 24px 0;
+    justify-content: center;
+
+    button {
+      font-size: 14px;
+      margin: 0 8px;
+
+      &:hover::after {
+        display: none;
+      }
+    }
+
+    .active::after {
+      width: calc(100% - 16px);
+      margin-left: 8px;
+    }
+  }
 `;
 
 export const PlanetInfo = styled.div`
@@ -133,6 +173,20 @@ export const PlanetInfo = styled.div`
 
     div {
       margin: 48px 0 0 0;
+    }
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    align-items: center;
+
+    div {
+      margin: 48px 0 0 0;
+      text-align: center;
+    }
+
+    div + div {
+      margin: 24px 0 0 0;
     }
   }
 `;

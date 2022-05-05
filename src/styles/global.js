@@ -59,6 +59,11 @@ export const Heading2 = styled.h2`
     font-size: 80px;
     text-align: center;
   }
+
+  @media (max-width: 375px) {
+    text-align: center;
+    font-size: 56px;
+  }
 `;
 
 export const Heading3 = styled.h3`
@@ -128,7 +133,7 @@ export const Bodytext = styled.p`
   }
 
   @media (max-width: 375px) {
-    font-size: 16px;
+    font-size: 15px;
     text-align: center;
   }
 `;

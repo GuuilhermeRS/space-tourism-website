@@ -65,4 +65,10 @@ export const Navbar = styled.nav`
       }
     }
   }
+
+  @media (max-width: 375px) {
+    a + a {
+      display: none;
+    }
+  }
 `;
