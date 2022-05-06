@@ -76,6 +76,11 @@ export const Heading3 = styled.h3`
   @media (max-width: 768px) and (min-width: 376px) {
     font-size: 40px;
   }
+
+  @media (max-width: 375px) {
+    font-size: 24px;
+    margin: 0;
+  }
 `;
 
 export const Heading4 = styled.h4`
@@ -87,6 +92,11 @@ export const Heading4 = styled.h4`
 
   @media (max-width: 768px) and (min-width: 376px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 375px) {
+    font-size: 16px;
+    margin-top: 32px;
   }
 `;
 
@@ -135,5 +145,6 @@ export const Bodytext = styled.p`
   @media (max-width: 375px) {
     font-size: 15px;
     text-align: center;
+    max-width: 300px;
   }
 `;

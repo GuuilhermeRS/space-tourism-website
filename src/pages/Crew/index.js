@@ -49,17 +49,17 @@ export default function Crew() {
               onClick={handleChangeCrewMember}
             />
           ))}
-
         </Nav>
 
+        <div className="img-container">
+          <img
+            src={images.png}
+            alt={name}
+          />
+        </div>
+
       </div>
 
-      <div className="img-container">
-        <img
-          src={images.png}
-          alt={name}
-        />
-      </div>
     </Section>
   );
 }

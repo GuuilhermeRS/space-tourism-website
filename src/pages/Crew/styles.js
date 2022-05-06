@@ -46,6 +46,41 @@ export const Section = styled.section`
       }
     }
   }
+
+  @media (max-width: 375px) {
+    max-width: 100%;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+
+
+    .description {
+      display:flex;
+      flex-direction: column;
+
+      h5 {
+        margin: 0;
+        order: 0;
+      }
+
+
+      .img-container {
+        display: flex;
+        justify-content: center;
+        max-height: 224px;
+        margin-top: 32px;
+
+        img {
+          max-width: 328px;
+          max-height: 224px;
+          align-items: center;
+          justify-content: center;
+          order: 1;
+        }
+      }
+    }
+
+  }
 `;
 
 export const Info = styled.div`
@@ -83,6 +118,15 @@ export const Info = styled.div`
       font-size: 16px;
     }
   }
+
+  @media (max-width: 375px) {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    order: 4;
+  }
 `;
 
 export const Nav = styled.div`
@@ -112,6 +156,21 @@ export const Nav = styled.div`
 
     button {
       margin: 0 12px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    order: 2;
+    margin: 32px 0 0;
+    display: flex;
+    justify-content: center;
+
+
+    button {
+      padding: 8px;
+      margin: 0 8px;
+      width: 10px;
+      height: 10px;
     }
   }
 `;
