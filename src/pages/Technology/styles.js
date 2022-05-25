@@ -22,6 +22,14 @@ export const Section = styled.section`
       margin-top: 40px;
     }
   }
+
+  @media (max-width: 375px) {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+    margin-top: 24px;
+  }
 `;
 
 export const Container = styled.div`
@@ -59,6 +67,33 @@ export const Container = styled.div`
       }
     }
 
+  }
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+
+    .info {
+      order: 3;
+      text-align: center;
+
+      h3 {
+        margin: 8px 0 16px;
+      }
+    }
+
+    picture {
+      order: 1;
+      margin-top: 32px;
+
+      source, img {
+        max-width: 100%;
+
+      }
+    }
+
+    nav {
+      order: 2;
+    }
   }
 `;
 
@@ -99,6 +134,18 @@ export const Nav = styled.nav`
 
     button {
       margin: 0 8px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    button {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
     }
   }
 `;
