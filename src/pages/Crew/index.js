@@ -8,6 +8,8 @@ import { Section, Info, Nav } from './styles';
 
 const { crew } = require('../../assets/data.json');
 
+const largura = window.screen.width;
+
 // const currentCrewMember = crew[0];
 
 export default function Crew() {
@@ -23,6 +25,15 @@ export default function Crew() {
   const {
     role, name, bio, images,
   } = currentCrewMember;
+
+  const img = (
+    <div className="img-container">
+      <img
+        src={images.png}
+        alt={name}
+      />
+    </div>
+  );
 
   return (
     <Section>
@@ -51,14 +62,10 @@ export default function Crew() {
           ))}
         </Nav>
 
-        <div className="img-container">
-          <img
-            src={images.png}
-            alt={name}
-          />
-        </div>
-
+        {largura <= 375 ? img : null}
       </div>
+
+      {largura > 375 ? img : null}
 
     </Section>
   );
